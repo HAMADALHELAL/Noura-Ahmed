@@ -20,7 +20,7 @@ interface Heart {
   @switch (stage()) {
     @case ('date') {
       <section class="card">
-        <p class="eyebrow">من حمد · إلى ضحى</p>
+        <p class="eyebrow">من أحمد · إلى نورة</p>
         <h1 class="display">دعوة عشاء</h1>
 
         <div class="ticket">
@@ -30,15 +30,15 @@ interface Heart {
           </div>
           <div class="ticket-row">
             <span class="label">اليوم</span>
-            <span class="value">باجر · الجمعة ٢ أكتوبر</span>
+            <span class="value">الأحد ٢٥ أكتوبر</span>
           </div>
           <div class="ticket-row">
             <span class="label">الساعة</span>
-            <span class="value">١٢:٠٠ منتصف الليل</span>
+            <span class="value">٩:٠٠ مساءً</span>
           </div>
           <div class="ticket-row">
             <span class="label">الحضور</span>
-            <span class="value">حمد و ضحى</span>
+            <span class="value">أحمد و نورة</span>
           </div>
         </div>
 
@@ -57,18 +57,18 @@ interface Heart {
     @case ('done') {
       <section class="card done">
         <p class="eyebrow">تأكيد رسمي</p>
-        <h1 class="display">حمد ♥ ضحى</h1>
+        <h1 class="display">أحمد ♥ نورة</h1>
 
         <ul class="stamps">
-          <li><span class="tick">✓</span> يا من حظك يا حمد، ضحى وافقت على موعد العشاء</li>
-          <li><span class="tick">✓</span> باجر الجمعة · الساعة ١٢ منتصف الليل</li>
+          <li><span class="tick">✓</span> يا من حظك يا أحمد، نورة وافقت على موعد العشاء</li>
+          <li><span class="tick">✓</span> الأحد ٢٥ أكتوبر · الساعة ٩ مساءً</li>
         </ul>
 
         <p class="when">وقت الموافقة: {{ acceptedAt() }}</p>
 
         <div class="shot">
           <strong>آخر خطوة:</strong>
-          كبجري الشاشة (سكرين شوت) ودزيها لحمد
+          كبجري الشاشة (سكرين شوت) ودزيها لأحمد
         </div>
       </section>
     }
@@ -88,7 +88,7 @@ interface Heart {
 }
 `,
   styles: `
-/* Layout: one centered card over a midnight sky — the date is at midnight */
+/* Layout: one centered card over a midnight sky — evening sky */
 :host {
   display: block;
   min-height: 100%;
