@@ -56,6 +56,7 @@ interface Heart {
 
     @case ('done') {
       <section class="card done">
+        <div class="dino" aria-hidden="true">🦕</div>
         <p class="eyebrow">تأكيد رسمي</p>
         <h1 class="display">أحمد ♥ نورة</h1>
 
@@ -266,6 +267,22 @@ interface Heart {
   padding: 14px 16px;
   color: var(--fg);
   line-height: 1.7;
+}
+
+.dino {
+  font-size: 4.5rem;
+  line-height: 1;
+  animation: dino-pop 0.8s cubic-bezier(.34, 1.56, .64, 1) both, dino-bob 2.4s ease-in-out 0.8s infinite;
+}
+
+@keyframes dino-pop {
+  from { transform: scale(0) rotate(-20deg); }
+  to { transform: scale(1) rotate(0); }
+}
+
+@keyframes dino-bob {
+  0%, 100% { transform: translateY(0) rotate(0); }
+  50% { transform: translateY(-8px) rotate(-6deg); }
 }
 
 .heart {
