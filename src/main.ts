@@ -9,6 +9,7 @@ interface Heart {
   delay: number;
   duration: number;
   size: number;
+  char: string;
 }
 
 @Component({
@@ -56,7 +57,6 @@ interface Heart {
 
     @case ('done') {
       <section class="card done">
-        <div class="dino" aria-hidden="true">🦕</div>
         <p class="eyebrow">تأكيد رسمي</p>
         <h1 class="display">أحمد ♥ نورة</h1>
 
@@ -84,7 +84,7 @@ interface Heart {
     [style.font-size.px]="h.size"
     [style.animation-delay.s]="h.delay"
     [style.animation-duration.s]="h.duration"
-    >♥</span
+    >{{ h.char }}</span
   >
 }
 `,
@@ -269,22 +269,6 @@ interface Heart {
   line-height: 1.7;
 }
 
-.dino {
-  font-size: 4.5rem;
-  line-height: 1;
-  animation: dino-pop 0.8s cubic-bezier(.34, 1.56, .64, 1) both, dino-bob 2.4s ease-in-out 0.8s infinite;
-}
-
-@keyframes dino-pop {
-  from { transform: scale(0) rotate(-20deg); }
-  to { transform: scale(1) rotate(0); }
-}
-
-@keyframes dino-bob {
-  0%, 100% { transform: translateY(0) rotate(0); }
-  50% { transform: translateY(-8px) rotate(-6deg); }
-}
-
 .heart {
   position: fixed;
   bottom: -40px;
@@ -395,6 +379,7 @@ export class App {
       delay: Math.random() * 2,
       duration: 5 + Math.random() * 3,
       size: 14 + Math.random() * 22,
+      char: i % 3 === 0 ? '🦕' : '♥',
     }));
     this.hearts.set(batch);
     setTimeout(() => this.hearts.set([]), 10500);
