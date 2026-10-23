@@ -26,7 +26,7 @@ jobs:
         with:
           node-version: 22
       - run: npm install
-      - run: npx ng build --base-href /dhuha/
+      - run: npx ng build --base-href /Noura-Ahmed/
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
         with:
